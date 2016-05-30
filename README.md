@@ -24,3 +24,9 @@ $phonum = $_POST['phonum'];
 $num->isvalid($sp,$phonum);
 ```
 This function returns a boolean ie **true** or **false**.
+
+If **false**is returned the error can be see in the property **numError**
+
+```php
+$num->numError;
+```

@@ -1,6 +1,6 @@
 <?php
  
-class EcoCashValidator
+class numhValidator
 {
   public $prov;
  
