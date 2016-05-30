@@ -1,6 +1,6 @@
 # numValidator
 
-phone number verifier for zim networks
+phone number verifier for zim networks.
 the function has 2 parameters:
 
 1. service provider - this can be the name of the network or its mobile payment system
@@ -23,4 +23,4 @@ $phonum = $_POST['phonum'];
 
 $num->isvalid($sp,$phonum);
 ```
-This function returns a boolean ie <span style="color:blue">true</span> false
+This function returns a boolean ie **true** or **false**.
