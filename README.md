@@ -10,7 +10,7 @@ the function has 2 parameters:
 
 Like this:
 ```php
-ie $object->isvalid(sp,phn).
+$object->isvalid(sp,phn).
 //sp = service provider, phn = phone number
 ```
 
