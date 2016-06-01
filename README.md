@@ -37,12 +37,18 @@ when an unknown payment system is entered
 4. **num error**
 when the value for the phone number is:
 
-* not numeric or of
-* not equal to 9 digits
+  * not numeric or of
+  * not equal to 9 digits
 
 Number is formated into a 9 digit number by removing +263, 263 and 0 from the first characters of the string.
-Spaces between digits are also removed.
-The formated number is stored in the property *formatedNum*. 
+
+this means the following numbers are formated as 772123456:
+* 0772 123 456
+* +263 772 123 456
+* 263772123456
+
+Spaces between digits are also removed. The formated number is stored in the property *formatedNum*.
+
 Using our previously established  we can aquire this propert like so:
 
 ```php
