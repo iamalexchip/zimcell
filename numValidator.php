@@ -21,6 +21,7 @@ class numValidator
 	    	# $paymentSys is the payment system
 	    	switch ($paymentSys) {
 
+	    		case 'econet':
 	    		case 'ecocash':
 
 	    			return $this->ecocashValid($fnum);
@@ -28,12 +29,14 @@ class numValidator
 	    		break;
 
 	    		// teleca
+	    		case 'telecel':
 	    		case 'telecash':
 
 	    			return $this->telecashValid($fnum);
 
 	    		break;
 
+	    		case 'netone':
 	    		case 'onewallet':
 
 	    			return $this->onewalletValid($fnum);
