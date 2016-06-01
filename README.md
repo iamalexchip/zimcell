@@ -2,7 +2,7 @@
 
 This is a package which can be used to verify Zimbabwe mobile network phone numbers.
 
-When calling function 2 parameters are required :
+When calling the function 2 parameters are required :
 
 1. mobile payment sytem name / service provider name
 
@@ -11,7 +11,7 @@ When calling function 2 parameters are required :
   * telecel / telecash
   * netone / onewallet
 
-   nb: value should be in lower case and one word
+   **nb**: *value should be in lower case and one word*
 
 2. the phone number to be verified
 
@@ -46,7 +46,7 @@ when the number is valid
 when its in valid
 
 3. **unknown sys**
-when an unknown payment system is entered
+when an unknown payment system / mobile network is entered
 
 4. **num error**
 when the value for the phone number is:
@@ -56,7 +56,7 @@ when the value for the phone number is:
 
 Spaces between digits are also removed. The formated number is stored in the property **formatedNum**.
 
-Using our previously established  we can aquire this propert like so:
+Using our previously established object we can aquire this propert like so:
 
 ```php
 $num->formatedNum;
