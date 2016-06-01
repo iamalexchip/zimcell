@@ -11,7 +11,7 @@ When calling the function 2 parameters are required :
   * telecel / telecash
   * netone / onewallet
 
-   **nb**: *value should be in lower case and one word*
+   **nb**: *value should be in lower case and one word.*
 
 2. the phone number to be verified
 
