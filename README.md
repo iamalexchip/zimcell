@@ -1,14 +1,16 @@
 # numValidator
 
-phone number verifier for Zimbabwe mobile networks.
-the function has 2 parameters:
+This is a package which can be used to verify Zimbabwe mobile network phone numbers.
 
-1. the payment sysytem name / service provider name
+When calling function 2 parameters are required :
+
+1. mobile payment sytem name / service provider name
 
    supported values for the first parameter are:
   * econet / ecocash
-  * telecel /telecash
-  * netone / onewallet 
+  * telecel / telecash
+  * netone / onewallet
+
    nb: value should be in lower case and one word
 
 2. the phone number to be verified
@@ -18,7 +20,8 @@ Like this:
 ```php
 
 $object->isvalid($pamentSys, $phonum).
-// $paymentSys = payment sysytem, $phonum = phone number
+// $paymentSys = payment sysytem
+// $phonum = phone number
 
 ```
 
@@ -67,4 +70,6 @@ this means the following numbers are formated as 772123456 :
 * +263 772 123 456
 * 263772123456
 
-There is a **test.php** file you can use to see the package in action
+There is a **test.php** file you can use to see the package in action.
+
+Enjoy! :smiley: :thumbsup:
