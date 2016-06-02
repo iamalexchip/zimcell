@@ -39,16 +39,16 @@ $num->isvalid($paymentSys,$phonum);
 ```
 This function returns 4 values:
 
-1. **true**
+1. **true** (boolean)
 when the number is valid
 
-2. **false**
+2. **false** (boolean)
 when its in valid
 
-3. **unknown sys**
+3. **'unknown sys'** (string)
 when an unknown payment system / mobile network is entered
 
-4. **num error**
+4. **'num error'** (string)
 when the value for the phone number is:
 
   * not numeric
