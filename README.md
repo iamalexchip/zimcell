@@ -54,7 +54,7 @@ when the value for the phone number is:
   * not numeric
   * not 9 digits long
 
-Spaces between digits are also removed. The formated number is stored in the property **formatedNum**.
+The formated number is stored in the property **formatedNum**.
 
 Using our previously established object we can aquire this propert like so:
 
@@ -63,7 +63,8 @@ $num->formatedNum;
 
 ```
 
-Number is formated into a 9 digit number by removing +263, 263 and 0 from the first characters of the string.
+The number is altered into a 9 digit number by removing +263, 263 and 0 from the first characters of the string.
+Spaces between numbers in the string are also removed. 
 
 this means the following numbers are formated as 772123456 :
 * 0772 123 456
