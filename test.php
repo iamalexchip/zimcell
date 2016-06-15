@@ -3,7 +3,7 @@
 
 	require('numValidator.php');
 
-	$num = new numValidator();
+	$num = new \Alex\numValidator();
 
 	if ( isset($_POST['phonum']) && isset($_POST['paymentSys']) ){
 	
@@ -34,17 +34,19 @@
 
 	<h1> Phone number validator </h1>
 	
-	<form method="POST" action="test.php">
+	<form method="POST" action="test.php" name="qw">
 
 		Phone number :
 		<input type="text" name="phonum"
 		<?php if (isset($phonum)){ echo 'value="'.$phonum.'"'; } ?>
 		>
 
+		<button type="submit"> Post </button>
+
 		<br><br>
 
 		Payment Sys :
-		<select name="paymentSys">
+		<select name="paymentSys" onchange="document.qw.submit()">
 
 			<option value="econet" <?php echo ($paymentSys == 'econet' ? $slt:''); ?>
 			>Econet </option>
@@ -63,11 +65,13 @@
 
 			<option value="onewallet" <?php echo ($paymentSys == 'onewallet' ? $slt:''); ?>
 			> Onewallet </option>
+
+			<option value="banana" <?php echo ($paymentSys == 'banana' ? $slt:''); ?>
+			> Banana :-)</option>
 			
 		</select>
 
-		<br><br>
-		<button type="submit"> Post </button>
+		<br>
 
 		<?php echo '<br><h1>'.$paymentSys.'</h1>'; ?>
 
@@ -84,8 +88,6 @@
 	</form>
 
 	</div>
-
-
 
 </body>
 </html>
