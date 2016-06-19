@@ -29,7 +29,7 @@ Example of use in code:
 
 ```php
 
-$num = new NumValidator();
+$num = new Alex\NumValidator();
 
 $paymentSys = 'econet';
 $phonum = '0771 000 001';
