@@ -25,6 +25,7 @@ $object->isvalid($pamentSys, $phonum).
 
 ```
 
+The package uses the name space \Alex.
 Example of use in code:
 
 ```php
