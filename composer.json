@@ -1,6 +1,6 @@
 {
     "name": "zerochip/zimcell",
-    "description": "A package for veriyfing providers for Zimbabwean phone numbers",
+    "description": "A package for verifying providers for Zimbabwean phone numbers",
     "license": "MIT",
     "authors": [
         {
