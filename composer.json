@@ -1,4 +1,17 @@
 {
-    "name": "zerochip/alex",
-    "version": "1.0"
+    "name": "zerochip/cell",
+    "description": "A package for veriyfing providers for Zimbabwean phone numbers",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "zerochip",
+            "email": "semhiles@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Zerochip\\": "src"
+        }
+    },
 }

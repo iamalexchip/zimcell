@@ -119,11 +119,7 @@ class numValidator
 		# ftd -> first two digits 
 		$ftd = substr($phonum, 0, 2);
 
-		if ($ftd == '77' || $ftd == '78'){
-
-			return true;
-
-		}
+		return ($ftd == '77' || $ftd == '78' ? true:false);
 
 	}
 
@@ -135,11 +131,7 @@ class numValidator
 		# ftd -> first two digits 
 		$ftd = substr($phonum, 0, 2);
 
-		if ($ftd == '73'){
-
-			return true;
-
-		}
+		return ($ftd == '73' ? true:false);
 
 	}
 
@@ -151,11 +143,7 @@ class numValidator
 		# ftd -> first two digits 
 		$ftd = substr($phonum, 0, 2);
 
-		if ($ftd == '71'){
-
-			return true;
-
-		}
+		return ($ftd == '71' ? true:false);
 
 	}
  
