@@ -14,12 +14,12 @@ class ZimCell
      *
      * @param string $provider Provider or service name
      *
-     * @throws Exception
-     *
      * @return array Codes available for that provider or service
      */
-    public function codesFor($provider)
+    public function codes($provider = null)
     {
+        $provider = strtolower($provider);
+
         $netoneCodes = ['71'];
         $telecelCodes = ['73'];
         $econetCodes = ['77', '78'];
@@ -27,14 +27,20 @@ class ZimCell
         $codes = [
             'econet' 	=> $econetCodes,
             'ecocash'	=> $econetCodes,
+
             'telecel'	=> $telecelCodes,
             'telecash'	=> $telecelCodes,
+            
             'netone'	=> $netoneCodes,
             'onemoney'	=> $netoneCodes
         ];
 
+        if (is_null($provider)) {
+            return $codes;
+        }
+
         if (!isset($codes[$provider])) {
-            throw new Exception("Unknown provider or service");
+            return null;
         }
 
         return $codes[$provider];
@@ -75,23 +81,37 @@ class ZimCell
         return $refinedNum;
     }
 
+     /**
+     * Converts a cellnumber to international format
+     *
+     * example: 077123456 to +26377123456
+     *
+     * @param string $num Cellnumber
+     *
+     * @return string The cellnumber on international format
+     */
+    public function intlFormat($num)
+    {
+        return '+263'.self::refine($num);
+    }
+
     /**
      * Verifys if the cellnumber is valid for Zimbabwe
      *
      * @param string $num Cellnumber
      *
-     * @return string The refined phone number
+     * @return boolean
      */
     public function valid($num)
     {
         $refinedNum = self::refine($num);
-        $firstDigit7 = substr($refinedNum, 0) == '7';
+        $firstDigit7 = substr($refinedNum, 0, 1) == '7';
 
-        if (!is_numeric($refinedNum) && strlen($refinedNum) != 9 && !$firstDigit7) {
-            return false;
+        if (is_numeric($refinedNum) && strlen($refinedNum) == 9 && $firstDigit7) {
+            return true;
         }
 
-        return true;
+        return false;
     }
 
     /**
@@ -100,18 +120,49 @@ class ZimCell
     * @param string $provider Provider or service name
     * @param string $num Cellnumber
     *
-    * @return boolean
+    * @return boolean | null
     */
     public function is($provider, $num)
     {
         $f2d = substr(self::refine($num), 0, 2);
-        $codes = self::codesFor($provider);
+        $codes = self::codes($provider);
+
+        if(is_null($codes))
+        {
+            return null;
+        }
 
         if (!in_array($f2d, $codes)) {
             return false;
         }
+        
+        if (self::valid($num))
+        {
+            return true;
+        }
 
-        return true;
+        return false;
+    }
+
+    /**
+    * Get the service provider for a cellnumber
+    *
+    * @param string $num Cellnumber
+    *
+    * @return string | null
+    */
+    public function getProvider($num)
+    {
+        $f2d = substr(self::refine($num), 0, 2);
+
+        foreach (self::codes() as $key => $value) {
+            if (in_array($f2d, $value)) {
+                if (self::valid($num))
+                {
+                    return $key;
+                }
+            }
+        }
     }
 
     /**
