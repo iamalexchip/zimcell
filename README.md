@@ -19,6 +19,14 @@ use Zerochip\Zimcell
 
 ## Methods
 
+- [refine](#refine)
+- [intlFormat](#intlformat)
+- [valid](#valid)
+- [is](#is)
+- [getProvider](#getprovider)
+
+----
+
 ### refine
 `refine($cellnumber)`
 
