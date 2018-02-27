@@ -58,8 +58,10 @@ Checks if the given cellnumber is a valid zimbabwean number by doing the followi
 ```php
 ZimCell::valid('0772 123 456');
 // returns true
+
 ZimCell::valid('0872 12 34 56');
 //returns false, refined number starts with an 8 i.e 872123456
+
 Zimcell::valid('0772 12345');
 // returns false, refined number will be 8 digits long i.e 77212345
 ```
@@ -71,8 +73,10 @@ Verifies if a number belongs to a given provider or service. The case of the pro
 ```php
 Zimcell::is('econet', '0772 123 456');
 // returns true
+
 Zimcell::is('teleCash', '0772 123 456');
 // returns false, note use of camelCase for provider name
+
 Zimcell::is('netcel', '0772 123 456');
 // returns null, netcel is not a supported provider
 ```
@@ -92,6 +96,7 @@ returns the provider for a phone number.
 ```php
 Zimcell::getProvider('0712123456');
 // returns netone
+
 Zimcell::getProvider('0812123456');
 // returns null
 ```
