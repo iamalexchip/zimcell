@@ -81,7 +81,7 @@ class Zimcell
         return $refinedNum;
     }
 
-     /**
+    /**
      * Converts a cellnumber to international format
      *
      * example: 077123456 to +26377123456
@@ -115,13 +115,13 @@ class Zimcell
     }
 
     /**
-    * Verifys if a number is valid for a provider or service
-    *
-    * @param string $provider Provider or service name
-    * @param string $num Cellnumber
-    *
-    * @return boolean | null
-    */
+     * Verifys if a number is valid for a provider or service
+     *
+     * @param string $provider Provider or service name
+     * @param string $num Cellnumber
+     *
+     * @return boolean | null
+     */
     public function is($provider, $num)
     {
         $f2d = substr(self::refine($num), 0, 2);
@@ -145,12 +145,12 @@ class Zimcell
     }
 
     /**
-    * Get the service provider for a cellnumber
-    *
-    * @param string $num Cellnumber
-    *
-    * @return string | null
-    */
+     * Get the service provider for a cellnumber
+     *
+     * @param string $num Cellnumber
+     *
+     * @return string | null
+     */
     public function getProvider($num)
     {
         $f2d = substr(self::refine($num), 0, 2);
