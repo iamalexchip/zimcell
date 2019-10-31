@@ -47,7 +47,7 @@ Zimcell::refine('0772123456');
 ### intlFormat
 `intlFormat($cellnumber)`
 
-Internationalises the phone number with a "+" prefix.
+Internationalizes the phone number with a "+" prefix.
 
 ```php
 Zimcell::intlFormat('0772 123 456');
@@ -90,12 +90,12 @@ Zimcell::is('netcel', '0772 123 456');
 ```
 Supported provider and service names are as follows:
 
-- econet
-- ecocash
-- telecel
-- telecash
-- netone
-- onemoney
+- Econet
+- EcoCash
+- Telecel
+- Telecash
+- NetOne
+- One Money
 
 ### getProvider
 `getProvider($cellnumber)`
