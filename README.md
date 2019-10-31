@@ -30,7 +30,7 @@ use Zerochip\Zimcell
 ### refine
 `refine($cellnumber)`
 
-This method refines the cell number by removing the following: 
+Cleans up the cell number of any legiblity helpers by removing the following: 
 
  - Spaces
  - Country code (+263 or 263)
