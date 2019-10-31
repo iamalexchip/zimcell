@@ -47,7 +47,7 @@ Zimcell::refine('0772123456');
 ### intlFormat
 `intlFormat($cellnumber)`
 
-Converts the number to international format
+Internationalises the phone number with a "+" prefix.
 
 ```php
 Zimcell::intlFormat('0772 123 456');
@@ -57,11 +57,11 @@ Zimcell::intlFormat('0772 123 456');
 ### valid
 `valid($cellnumber)`
 
-Checks if the given cellnumber is a valid zimbabwean number by doing the following
+Checks if the given cellnumber is a valid Zimbabwean number by:
 
-- runs the refine function
-- checks if the refined number is 9digits long
-- checks if the refined number starts with a 7
+- running the refine function
+- checking if the refined number is 9 digits long
+- checking if the refined number starts with a 7
 
 ```php
 ZimCell::valid('0772 123 456');
